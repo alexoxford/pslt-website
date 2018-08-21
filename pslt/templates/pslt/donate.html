@@ -1,0 +1,45 @@
+{% extends 'pslt/base.html' %}
+{% load static %}
+{% block head_title %} Piedmont Student Launch Team {% endblock %}
+{% block head_meta %}
+    <meta property="og:url" content="http://www.piedmontlaunch.org/donate"/>
+    <meta property="og:title" content="Donate to the Piedmont Student Launch Team"/>
+    <meta property="og:description"
+          content="The Piedmont Student Launch Team is supported by our generous donors."/>
+    <meta property="og:image" content="{% static 'pslt/images/logo_fin.png' %}"/>
+    <meta property="og:type" content="website"/>
+{% endblock %}
+{% block local_styles %}
+    <style type="text/css">
+        div.content form {
+            text-align: center;
+        }
+    </style>
+{% endblock %}
+
+{% block pre_content %}
+    <img src="{% static 'pslt/images/donate-pre-content.png' %}" alt="Team picture">
+{% endblock %}
+
+{% block content %}
+    <h2>Your generous donations allow our team to achieve great things!</h2>
+    <p>Please consider donating any amount you can to support our Student Launch team. Funds received will go toward
+        helping the team purchase structural and electronic components,
+        rocket motors, consumable supplies, software, hardware, and any of the myriad other things that go into building
+        a large rocket and experimental payload. In addition, donations
+        allow the team to travel to Launch Week competition in Huntsville, AL at the Marshall Space Flight Center, where
+        teams from around the country will fly their rockets and conduct
+        their experiments.</p>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+			">
+        <input type="image" src="{% static 'pslt/images/paypal_logo.jpg' %}" name="submit"
+               alt="PayPal - The safer, easier way to pay online!">
+    </form>
+    <p>Donations are collected through PayPal and deposited in the team&#39;s account at Piedmont Virginia Community
+        College. The donation site was set up by David Oxford, whose name you may see
+        during the donation process, along with fundraising@piedmontlaunch.org. Credit card donations will appear as
+        PAYPAL *FUNDRAISING.</p>
+    <p>Thank you for your kind support!</p>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% load static %}
+{% load pslt_extras %}
+<div class="sponsor fab">
+    <a href="{{ sponsor.link }}" target="_blank">
+        {% with img_url='pslt/images/'|addstr:sponsor.img_uri %}
+            <img src="{% static img_url %}" alt="{{ sponsor.name }}">
+        {% endwith %}
+    </a>
+    <br>
+    <br>
+    <p>{{ sponsor.name }}</p>
+</div>

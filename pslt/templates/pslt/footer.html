@@ -1,0 +1,24 @@
+{% load static %}
+
+<div class="footer">
+    <a href="http://www.twitter.com/piedmontlaunch" class="nav-social-img-link" target="_blank">
+        <img src="{% static 'pslt/images/social_twitter_logo.png' %}" alt="Piedmont Student Launch Twitter Page">
+    </a>
+    <a href="https://www.instagram.com/piedmontlaunch" class="nav-social-img-link" target="_blank">
+        <img src="{% static 'pslt/images/social_instagram_logo.jpg' %}" alt="Piedmont Student Launch Instagram Page">
+    </a>
+    <a href="http://www.facebook.com/piedmontlaunch" class="nav-social-img-link" target="_blank">
+        <img src="{% static 'pslt/images/social_facebook_logo.png' %}" alt="Piedmont Student Launch Facebook Page">
+    </a>
+
+    <div class="footer-text">
+        {% with email='web@piedmontlaunch.org' %}
+            To report issues with this website, please contact the web master at
+            <a href="mailto:{{ email }}" style="color: white;">{{ email }}</a>.
+        {% endwith %}
+    </div>
+
+    <a href="/donate/" class="nav-donate-img-link">
+        <img src="{% static 'pslt/images/paypal_header.png' %}" alt="Donate">
+    </a>
+</div>

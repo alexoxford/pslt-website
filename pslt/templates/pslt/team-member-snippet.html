@@ -1,0 +1,12 @@
+{% load static %}
+{% load pslt_extras %}
+<div class="team-member">
+    {% if member.img_uri %}
+        {% with img_url='pslt/images/'|addstr:member.img_uri %}
+            <img src="{% static img_url %}" alt="{{ member.name }}">
+        {% endwith %}
+    {% endif %}
+    <h1>{{ member.name }}</h1>
+    <h2>{{ member.role }}</h2>
+    <p>{{ member.bio }}</p>
+</div>

@@ -1,0 +1,305 @@
+@import "https://fonts.googleapis.com/css?family=Carrois+Gothic+SC";
+/*region General*/
+html {
+  min-height: 100%;
+  height: 100%; }
+
+img {
+  max-width: 100%; }
+
+img.rounded,
+canvas.rounded {
+  border-radius: 1.9rem; }
+
+body {
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  margin: 0;
+  position: relative;
+  min-height: 100%; }
+
+/*endregion*/
+/*region Header*/
+div.header {
+  width: 100%;
+  margin: 0;
+  position: relative; }
+
+div.header div.header-name {
+  width: 100%;
+  background-color: #00519c;
+  margin: 0 auto;
+  text-align: center;
+  color: white; }
+
+div.header div.header-name h1 {
+  margin: 0;
+  font-family: "Carrois Gothic SC", sans-serif;
+  font-weight: normal; }
+
+div.header div.header-name a {
+  text-decoration: none;
+  color: white; }
+
+div.header div.header-name a:hover {
+  /*background-color: $pvcc_highlighted_blue;*/ }
+
+div.header div.pvcc-logo {
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+/*endregion*/
+/*region Nav-Bar*/
+div.nav-menu {
+  background-color: #00519c;
+  overflow: auto;
+  margin: 0 auto;
+  display: none; }
+
+div.nav-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 0 30px; }
+
+div.nav-menu dt, li {
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+div.nav-menu li {
+  padding: 10px; }
+
+div.nav-menu dd {
+  display: none; }
+
+div.nav-menu button.plus-minus {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 16px;
+  color: white;
+  margin: 0;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif; }
+
+div.nav-menu span.spacer {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 10px; }
+
+div.nav-bar button#menu-mobile {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  width: 3rem;
+  height: 3rem; }
+
+div.nav-menu a.nav-link,
+div.desktop-nav-bar a.nav-link {
+  background-color: #00519c;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 16px;
+  color: white;
+  margin: 0;
+  padding: 10px;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s; }
+
+div.nav-menu a.nav-link:hover,
+div.desktop-nav-bar a.nav-link:hover {
+  background-color: #49759b; }
+
+div.nav-bar button.transition-blue,
+div.nav-menu button.transition-blue,
+div.desktop-nav-bar button.transition-blue {
+  background: none;
+  border: none;
+  cursor: pointer;
+  box-sizing: content-box;
+  transition: background-color 0.3s; }
+
+div.nav-bar button.transition-blue:hover,
+div.nav-menu button.transition-blue:hover,
+div.desktop-nav-bar button.transition-blue:hover {
+  background-color: #49759b; }
+
+div.nav-bar, div.nav-menu, div.desktop-nav-bar {
+  width: 100%;
+  background-color: #00519c;
+  margin: 0 auto;
+  padding-left: 5px;
+  box-sizing: border-box; }
+
+div.nav-bar, div.nav-menu {
+  display: none;
+  overflow: hidden; }
+
+div.desktop-nav-bar ul.desktop-nav-hidden {
+  display: none;
+  list-style: none;
+  position: absolute;
+  left: 0;
+  max-width: 100%;
+  padding: 0; }
+
+div.desktop-nav-bar li.desktop-top-nav-link {
+  display: inline-block;
+  position: relative;
+  padding: 0; }
+
+div.desktop-nav-bar li.desktop-nav-link {
+  padding: 0;
+  width: max-content; }
+
+div.desktop-nav-bar ul.desktop-top-nav-list {
+  margin: 0;
+  padding: 0; }
+
+div.nav-bar a#mobile-name {
+  text-decoration: none;
+  font-family: "Carrois Gothic SC", sans-serif;
+  font-weight: normal;
+  color: white;
+  margin: 0;
+  grid-column: 2;
+  grid-row: 1; }
+
+/*endregion*/
+/*region Pre-Content*/
+div.pre-content {
+  width: 100%;
+  display: none;}
+
+div.pre-content img {
+  width: 100%; }
+
+/*endregion*/
+/*region Content*/
+div.content {
+  background-color: white;
+  width: 75%;
+  margin: 0 auto;
+  line-height: 150%;
+  padding: 0;
+  text-align: justify;
+  display: flow-root; }
+
+div.content a {
+  color: #ae2b55;
+  /*text-decoration: none;*/
+  font-weight: bold; }
+
+div.content a:hover {
+  text-decoration: underline; }
+
+div.content h1 {
+  font-family: "Carrois Gothic SC", sans-serif;
+  font-weight: normal;
+  line-height: initial;
+  text-align: left; }
+
+div.content h2 {
+  font-weight: normal; }
+
+div.content a.fab,
+div.content div.fab {
+  text-decoration: none;
+  background-color: #ffffff44;
+  box-shadow: 0 0 1rem #49759b;
+  border-radius: 1.9rem;
+  padding: 1rem;
+  display: inline-block;
+  margin: 0.5rem auto; }
+
+/*region Documents*/
+/*endregion*/
+/*region Outreach*/
+/*endregion*/
+/*endregion*/
+/*region Footer*/
+div.footer {
+  bottom: 0;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background: #00519c;
+  color: white;
+  padding: 10px 5%;
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  justify-content: center; }
+
+div.footer a.nav-social-img-link {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  min-width: 2rem;
+  margin: 0 0.5rem; }
+
+div.footer a.nav-donate-img-link {
+  display: inline-block;
+  max-height: 2rem;
+  width: 9rem; }
+
+div.footer div.footer-text {
+  margin: 0 auto; }
+
+/*endregion*/
+/*region Blog*/
+div.blog-snippet h2 {
+  color: darkgray; }
+
+/*endregion*/
+/*region Mobile*/
+@media (max-width: 768px) {
+  div.content {
+    width: 95%; }
+
+  div.header-name {
+    display: none; }
+
+  div.header div.pvcc-logo {
+    display: none; }
+
+  div.desktop-nav-bar {
+    display: none; }
+
+  div.nav-bar {
+    display: grid;
+    grid-template-columns: min-content auto;
+    align-items: center;
+    justify-items: right;
+    padding-right: 10px; }
+
+  div.nav-bar span.spacer {
+    display: none; }
+
+  div.nav-bar dt, div.nav-bar ul, div.nav-bar li, div.nav-bar dd {
+    margin: 0 auto; }
+
+  div.blog-snippet h2 {
+    font-size: small; }
+
+  div.footer {
+    display: flow-root; }
+
+  div.footer a.nav-social-img-link {
+    width: 3rem;
+    height: 3rem; }
+
+  div.footer a.nav-donate-img-link {
+    display: none; } }
+/*endregion*/
+
+/*# sourceMappingURL=style-1.0.css.map */

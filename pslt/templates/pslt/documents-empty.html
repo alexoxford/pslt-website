@@ -1,0 +1,32 @@
+{% extends 'pslt/base.html' %}
+{% load static %}
+{% block head_title %} Piedmont Student Launch Team {% endblock %}
+{% block head_meta %}
+    <meta property="og:url" content="http://www.piedmontlaunch.org/documents/{{ year }}"/>
+    <meta property="og:title" content="Piedmont Student Launch Team"/>
+    <meta property="og:description"
+          content="The Piedmont Student Launch Team is a group of Piedmont Virginia Community College Students competing in the NASA University Student Launch Initiative."/>
+    <meta property="og:image" content="{% static 'pslt/images/logo_fin.png' %}"/>
+    <meta property="og:type" content="website"/>
+{% endblock %}
+{% block local_styles %}
+    <style type="text/css">
+        div.content h2 {
+            width: 100%;
+            text-align: center;
+            line-height: 1.5rem;
+        }
+    </style>
+{% endblock %}
+
+{% block pre_content %}
+    <img src="{% static 'pslt/images/documents-pre-content.jpg' %}" alt="Team picture">
+{% endblock %}
+
+{% block content %}
+    <h1>{{ year|add:-1 }}-{{ year }} Student Launch Documentation</h1>
+    <br>
+    <br>
+    <br>
+    <h2>No documents for this year are currently available.</h2>
+{% endblock %}

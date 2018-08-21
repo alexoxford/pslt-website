@@ -1,0 +1,46 @@
+{% extends 'pslt/base.html' %}
+{% load static %}
+{% block head_title %}Sponsors{% endblock %}
+{% block head_meta %}
+    <meta property="og:url" content="http://www.piedmontlaunch.org/sponsors" />
+    <meta property="og:title" content="Piedmont Student Launch Team Sponsors" />
+    <meta property="og:description" content="The Piedmont Student Launch Team is supported by our generous sponsors." />
+    <meta property="og:image" content="{% static 'pslt/images/logo_fin.png' %}" />
+    <meta property="og:type" content="website" />
+{% endblock %}
+{% block local_styles %}
+    <style type="text/css">
+    div.sponsor {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    div.sponsor p {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    div.sponsor img {
+        max-width: 100%;
+        max-height: 200px;
+    }
+
+    div.sponsor a {
+        text-decoration: none;
+    }
+
+    div.sponsor a:hover {
+        text-decoration: none;
+    }
+    </style>
+{%  endblock %}
+
+{% block content %}
+    <h2>This project is made possible by the generous donations of our sponsors</h2>
+    {% for single_sponsor in sponsors %}
+        {% include 'pslt/sponsor-snippet.html' with sponsor=single_sponsor %}
+        <br>
+        <br>
+    {% endfor %}
+{% endblock %}

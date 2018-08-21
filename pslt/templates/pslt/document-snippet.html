@@ -1,0 +1,17 @@
+<h1 class="document-title">{{ doc_r.name }}</h1>
+<p>
+    {% if doc_r %}
+        <a href="{{ doc_r.uri }}" class="document" target="_blank">
+            {{ year|add:-1 }}-{{ year }} {{ doc_r.short_name }}</a> [.pdf] [{{ doc_r.page_count }} pages]
+    {% endif %}
+    {% if doc_s %}
+        <br>
+        <a href="{{ doc_s.uri }}" class="document" target="_blank">
+            {{ year|add:-1 }}-{{ year }} {{ doc_s.short_name }}</a> [.pdf] [{{ doc_s.page_count }} pages]
+    {% endif %}
+    {% if doc_f %}
+        <br>
+        <a href="{{ doc_f.uri }}" class="document" target="_blank">
+            {{ year|add:-1 }}-{{ year }} {{ doc_f.short_name }}</a> [.pdf] [{{ doc_f.page_count }} pages]
+    {% endif %}
+</p>

@@ -1,0 +1,73 @@
+{% extends 'pslt/base.html' %}
+{% load static %}
+{% block head_title %} Piedmont Student Launch Team {% endblock %}
+{% block local_styles %}
+    <style type="text/css">
+        div.cal {
+            position: relative;
+            padding-bottom: 75%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        div.cal iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        div.mobileCal {
+            display: none;
+        }
+
+        div.content h1 {
+            text-align: left;
+        }
+
+        @media only screen and (max-width: 768px) {
+
+            div.mobileCal {
+                display: block;
+            }
+
+            div.desktopCal {
+                display: none;
+            }
+        }
+
+        div#milestones {
+            margin-top: 20px;
+            margin-bottom: 25px;
+            overflow: auto;
+            width: 100%;
+            border: black solid;
+            padding-top: 10px;
+            text-align: center;
+            display: none;
+        }
+
+        div.content img {
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+{% endblock %}
+
+{% block pre_content %}
+    <img src="{% static 'pslt/images/index-pre-content.jpg' %}" alt="Team picture">
+{% endblock %}
+
+{% block content %}
+    <div id="milestones">
+    </div>
+
+    <!--h1>News</h1>
+    <div class="blog-port">
+        {% for post in blog_posts %}
+            {% include 'pslt/blog-snippet.html' with blog_post=post %}
+            <br>
+        {% endfor %}
+    </div-->
+{% endblock %}

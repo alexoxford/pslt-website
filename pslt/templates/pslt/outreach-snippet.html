@@ -1,0 +1,17 @@
+{% load static %}
+{% load pslt_extras %}
+<div class="outreach-event">
+    <h1>{{ event.name }}</h1>
+    {% with img_url='pslt/images/'|addstr:event.img_uri %}
+        <div class="outreach-img-wrapper">
+            <img src="{% static img_url %}" class="rounded" alt="{{ event.name }}">
+            <canvas class="gradient rounded"></canvas>
+            <br>
+            {% with event_url='/outreach/'|addstr:event.url %}
+                <a href="{{ event_url }}" class="outreach-fab fab">Learn More</a>
+            {% endwith %}
+        </div>
+    {% endwith %}
+    <p>{{ event.description }}</p>
+
+</div>

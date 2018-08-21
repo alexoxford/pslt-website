@@ -1,0 +1,44 @@
+{% extends 'pslt/base.html' %}
+{% load static %}
+{% block head_title %} Piedmont Student Launch Team {% endblock %}
+{% block head_meta %}
+    <meta property="og:url" content="http://www.piedmontlaunch.org/contact"/>
+    <meta property="og:title" content="Piedmont Student Launch Team"/>
+    <meta property="og:description"
+          content="The Piedmont Student Launch Team is a group of Piedmont Virginia Community College Students competing in the NASA University Student Launch Initiative."/>
+    <meta property="og:image" content="{% static 'pslt/images/logo_fin.png' %}"/>
+    <meta property="og:type" content="website"/>
+{% endblock %}
+{% block local_styles %}
+    <style type="text/css">
+        div.outreach-event div.outreach-img-wrapper {
+            position: relative;
+            width: fit-content;
+            text-align: center;
+        }
+
+        div.outreach-event canvas.gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        div.outreach-event img {
+            max-height: 25rem;
+            max-width: 100%;
+        }
+    </style>
+{% endblock %}
+
+{% block pre_content %}
+    <img src="{% static 'pslt/images/outreach-pre-content.jpg' %}" alt="Team picture">
+{% endblock %}
+
+{% block content %}
+    <h1>Our Mission</h1>
+    <p>Mission statement here</p>
+    {% for event in events %}
+        <br>
+        {% include 'pslt/outreach-snippet.html' with event=event %}
+    {% endfor %}
+{% endblock %}

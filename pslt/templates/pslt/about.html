@@ -1,0 +1,53 @@
+{% extends 'pslt/base.html' %}
+{% load static %}
+{% block head_title %} Piedmont Student Launch Team {% endblock %}
+{% block head_meta %}
+    <meta property="og:url" content="http://www.piedmontlaunch.org/about/{{ year }}"/>
+    <meta property="og:title" content="Piedmont Student Launch Team"/>
+    <meta property="og:description"
+          content="The Piedmont Student Launch Team is a group of Piedmont Virginia Community College Students competing in the NASA University Student Launch Initiative."/>
+    <meta property="og:image" content="{% static 'pslt/images/logo_fin.png' %}"/>
+    <meta property="og:type" content="website"/>
+{% endblock %}
+{% block local_styles %}
+    <style type="text/css">
+
+    </style>
+{% endblock %}
+
+{% block pre_content %}
+    <img src="{% static 'pslt/images/about-pre-content.jpg' %}" alt="Team picture">
+{% endblock %}
+
+{% block content %}
+    <h1>Piedmont Student Launch Team</h1>
+
+    <p>The Piedmont Student Launch Team is a group of Piedmont Virginia Community College students, backed by PVCC
+        faculty, administration, and industry professionals, participating in one of the premier engineering challenges
+        available to college students: NASA Student Launch. Being a part of PSLT gives students in many disciplines an
+        unparalleled opportunity to develop the technical, professional, and team skills that workplaces want to see,
+        while also enjoying the camaraderie of a fun team project like no other. Over the eight-month course of the
+        project (September to April), team members will build and fly multiple high-power rockets, prepare and present
+        technical reports for NASA, develop and program electronics, fabricate payload components, participate in
+        community outreach events, and learn how to function as part of a high-performing technical project team.</p>
+    <br>
+    <h1>About NASA Student Launch</h1>
+    <p><a href="https://www.nasa.gov/audience/forstudents/studentlaunch/home/index.html" target="_blank">Student
+        Launch</a> is an eight-month NASA experiential program challenging college student teams to design, fabricate,
+        test, and launch high-power rockets and scientific payloads, conduct educational outreach activities, and
+        complete a series of real-world comprehensive design reviews, all overseen by NASA staff, engineers and
+        scientists. Teams from universities and colleges nationwide take part in this annual competition run by the NASA
+        Academic Affairs Office at the Marshall Space Flight Center in Huntsville, AL. While there are winners in
+        numerous categories, the real challenge is to meet NASA’s many milestone requirements and successfully fly a
+        rocket in Huntsville with teams from around the country.
+        <br><br>After a competitive proposal selection process, teams participate in a series of design reviews that are
+        submitted to NASA and presented via teleconference. These reviews mirror the engineering design lifecycle,
+        providing an experience that prepares students for the real-world technical workforce. Over the course of the
+        project, teams must complete a Preliminary Design Review, Critical Design Review, and Flight Readiness Review as
+        they design, build, test, fly, and refine their rocket and payload designs.
+        <br><br>Prior to flying at Launch Week in April in Huntsville, AL, teams must also complete a rigorous Launch
+        Readiness Review to verify that they are ready to fly safely. After their Launch Week flight, teams must analyze
+        payload performance and flight data in a Post Launch Assessment Review. All of these pieces require the students
+        to function as a high-end project team to meet challenging milestones, providing real-world experience that
+        gives Student Launch team members a competitive edge in the job market.</p>
+{% endblock %}

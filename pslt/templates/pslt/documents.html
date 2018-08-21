@@ -1,0 +1,123 @@
+{% extends 'pslt/base.html' %}
+{% load static %}
+{% block head_title %} Piedmont Student Launch Team {% endblock %}
+{% block head_meta %}
+    <meta property="og:url" content="http://www.piedmontlaunch.org/documents/{{ year }}"/>
+    <meta property="og:title" content="Piedmont Student Launch Team"/>
+    <meta property="og:description"
+          content="The Piedmont Student Launch Team is a group of Piedmont Virginia Community College Students competing in the NASA University Student Launch Initiative."/>
+    <meta property="og:image" content="{% static 'pslt/images/logo_fin.png' %}"/>
+    <meta property="og:type" content="website"/>
+{% endblock %}
+{% block local_styles %}
+    <style type="text/css">
+        div.content h2.newest-doc {
+            width: 100%;
+            text-align: center;
+            line-height: 1.5rem;
+        }
+    </style>
+{% endblock %}
+
+{% block pre_content %}
+    <img src="{% static 'pslt/images/documents-pre-content.jpg' %}" alt="Team picture">
+{% endblock %}
+
+{% block content %}
+    <h1>{{ year|add:-1 }}-{{ year }} Student Launch Documentation</h1>
+
+    <h2 class="newest-doc">
+        {% if newest %}
+            {% if newest_r %}
+                <!-- Newest document is PDR, CDR, or FRR -->
+                Most Recent Document: {{ newest_r.name }}
+                <br>
+                <br>
+                <a href="{{ newest_r.uri }}" class="newest-doc fab">{{ newest_r.short_name }}</a>
+                <a href="{{ newest_s.uri }}" class="newest-doc fab">{{ newest_s.short_name }}</a>
+                <a href="{{ newest_f.uri }}" class="newest-doc fab">{{ newest_f.short_name }}</a>
+            {% else %}
+                <!-- Newest document is proposal or PLAR -->
+                Most Recent Document: {{ newest.name }}
+                <br>
+                <br>
+                <a href="{{ newest.uri }}" class="newest-doc">{{ newest.short_name }}</a>
+            {% endif %}
+        {% else %}
+            <!-- No newest document -->
+        {% endif %}
+    </h2>
+
+    <p class="document-explanation">
+        [Brief overview of the documents and how they mirror the real-world contracting process]
+    </p>
+
+    {% if proposal %}
+        <br>
+        <br>
+        <img src="documents-proposal.jpg" id="proposal" class="document">
+        <h1 class="document-title">{{ proposal.name }}</h1>
+        <p>
+            <a href="{{ proposal.uri }}" class="document" target="_blank">
+                {{ year|add:-1 }}-{{ year }} {{ proposal.short_name }}</a> [.pdf] [{{ proposal.page_count }} pages]
+        </p>
+        <p class="document-explanation">
+            The proposal is the first document that we submit, in response to the Request For Proposal (RFP) that NASA
+            sends out each year (the RFP is the first part of the <a
+                href="https://www.nasa.gov/audience/forstudents/studentlaunch/handbook/index.html">Student Launch
+            Handbook</a>).
+        </p>
+    {% endif %}
+
+    {% if pdr_r %}
+        <br>
+        <br>
+        <img src="documents-pdr.jpg" id="pdr" class="document">
+        {% include 'pslt/document-snippet.html' with doc_r=pdr_r doc_s=pdr_s doc_f=pdr_f %}
+        <p class="document-explanation">
+            [PDR definition]
+        </p>
+    {% endif %}
+
+    {% if cdr_r %}
+        <br>
+        <br>
+        <img src="documents-cdr.jpg" id="cdr" class="document">
+        {% include 'pslt/document-snippet.html' with doc_r=cdr_r doc_s=cdr_s doc_f=cdr_f %}
+        <p class="document-explanation">
+            [CDR definition]
+        </p>
+    {% endif %}
+
+    {% if frr_r %}
+        <br>
+        <br>
+        <img src="documents-frr.jpg" id="frr" class="document">
+        {% include 'pslt/document-snippet.html' with doc_r=frr_r doc_s=frr_s doc_f=frr_f %}
+        <p class="document-explanation">
+            [FRR definition]
+        </p>
+    {% endif %}
+
+    {% if plar_r %}
+        <br>
+        <br>
+        <img src="documents-plar.jpg" id="plar" class="document">
+        {% include 'pslt/document-snippet.html' with doc_r=plar_r doc_s=plar_s doc_f=plar_f %}
+        <p class="document-explanation">
+            [PLAR definition]
+        </p>
+    {% endif %}
+
+    {% if other %}
+        <br>
+        <br>
+        <img src="documents-other.jpg" id="other" class="document">
+        <h1 class="document-title">Other Documents</h1>
+        {% for other_document in other %}
+            <p><a href="{{ other_document.uri }}" class="document" target="_blank">{{ other_document.short_name }}</a>
+                [.pdf]
+                [{{ other_document.page_count }} pages] -- {{ other_document.name }}</p>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

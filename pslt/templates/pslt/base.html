@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% block head_meta %}
+        <meta property="og:url" content="http://www.piedmontlaunch.org" />
+        <meta property="og:title" content="Piedmont Student Launch Team" />
+        <meta property="og:description" content="The Piedmont Student Launch Team is a group of Piedmont Virginia Community College Students competing in the NASA University Student Launch Initiative." />
+        <meta property="og:image" content="{% static 'pslt/images/logo_fin.png' %}" />
+        <meta property="og:type" content="website" />
+    {% endblock %}
+
+    <title>{% block head_title %}PSLT Base Template{% endblock %}</title>
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'pslt/images/favicon.ico'%}"/>
+    <link rel='stylesheet' type='text/css' href='{% static 'pslt/style-1.0.css' %}'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    {% block local_styles %}{% endblock %}
+</head>
+<body>
+{% block header %}
+{% include 'pslt/header.html' %}
+{% endblock %}
+
+<div class="pre-content">
+{% block pre_content %}{% endblock %}
+</div>
+
+<div class="content">
+{% block content %}{% endblock %}
+</div>
+
+<div class="sidebar">
+{% block sidebar %}{% endblock %}
+</div>
+
+{% block footer %}
+{% include 'pslt/footer.html' %}
+{% endblock %}
+
+<script src="{% static 'pslt/scripts.js' %}"></script>
+</body>
+</html>

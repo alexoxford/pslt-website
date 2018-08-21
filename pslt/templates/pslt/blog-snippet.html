@@ -1,0 +1,8 @@
+{% load static %}
+<div class="blog-snippet" style="border: black solid 2px; padding: 10px">
+    <h1 style="width: 100%; text-align: center;">{{ blog_post.title|safe }}</h1>
+    <h2><span style="float: left;">{{ blog_post.author }}</span>
+    <span style="float: right;">{{ blog_post.pub_date }}</span></h2>
+    <br>
+    <p>{{ blog_post.body|safe }}</p>
+</div>

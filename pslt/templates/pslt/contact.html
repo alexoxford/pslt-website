@@ -1,0 +1,37 @@
+{% extends 'pslt/base.html' %}
+{% load static %}
+{% block head_title %} Piedmont Student Launch Team {% endblock %}
+{% block head_meta %}
+    <meta property="og:url" content="http://www.piedmontlaunch.org/contact"/>
+    <meta property="og:title" content="Piedmont Student Launch Team"/>
+    <meta property="og:description"
+          content="The Piedmont Student Launch Team is a group of Piedmont Virginia Community College Students competing in the NASA University Student Launch Initiative."/>
+    <meta property="og:image" content="{% static 'pslt/images/logo_fin.png' %}"/>
+    <meta property="og:type" content="website"/>
+{% endblock %}
+{% block local_styles %}
+    <style type="text/css">
+
+    </style>
+{% endblock %}
+
+{% block pre_content %}
+    <img src="{% static 'pslt/images/contact-pre-content.jpg' %}" alt="Team picture">
+{% endblock %}
+
+{% block content %}
+    <h1>Contact</h1>
+
+    <p>The Piedmont Student Launch Team is looking for ambitious people to participate in the 2018-2019 NASA Student
+        Launch Initiative.
+        If you have ever flown a model rocket, watched a rocket launch on TV, dreamed of mankind&#39;s future among the
+        stars, or enjoy coordinating complex projects for a great cause, the Piedmont Student Launch Team may be the
+        right place for you. On this team your unique and innovative skills will get put to use solving challenging
+        problems with like-minded teammates and some of the brightest minds at NASA.</p>
+
+    <p>For more information, or to join in the fun, send a message to <a href="mailto:info@piedmontlaunch.org">info@piedmontlaunch.org</a>
+    </p>
+    <p>For more information on our outreach activities, email our Director of Engagement & Outreach: <a
+            href="mailto:outreach@piedmontlaunch.org">outreach@piedmontlaunch.org</a></p>
+    <br>
+{% endblock %}
