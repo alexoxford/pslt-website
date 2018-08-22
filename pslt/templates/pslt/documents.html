@@ -20,6 +20,10 @@
         div.content img.document {
             display: none;
         }
+    
+        div.content p.document-explanation {
+            display: none;
+        }
     </style>
 {% endblock %}
 
@@ -103,11 +107,11 @@
         </p>
     {% endif %}
 
-    {% if plar_r %}
+    {% if plar %}
         <br>
         <br>
         <img src="documents-plar.jpg" id="plar" class="document">
-        {% include 'pslt/document-snippet.html' with doc_r=plar_r doc_s=plar_s doc_f=plar_f %}
+        {% include 'pslt/document-snippet.html' with doc_r=plar %}
         <p class="document-explanation">
             [PLAR definition]
         </p>
