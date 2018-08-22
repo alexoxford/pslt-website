@@ -1,3 +1,4 @@
+box: wercker/python3
 build:
   steps:
     # no-op for now
