@@ -35,7 +35,7 @@ function updateUI() {
     var epsilon = 10;
     var footer = $("div.footer");
     footer.css("margin-top", epsilon);
-    if ($("body").innerHeight() > window.innerHeight - footer.outerHeight()) {
+    if (getContentHeight() > window.innerHeight) {
         // if there's more than a page of content, position the footer normally
         footer.css("position", "inherit");
         footer.css("bottom", "auto");
@@ -78,4 +78,15 @@ function updateUI() {
         ctx.fillRect(0, 0, canvas[0].width, canvas[0].height);
     })
     /*endregion*/
+}
+
+function getContentHeight() {
+    var totalHeight = 0;
+    $("body").children().each(function () {
+        if($(this).css('display') === 'none') {
+            return;
+        }
+        totalHeight = totalHeight + $(this).outerHeight(true);
+    });
+    return totalHeight;
 }
