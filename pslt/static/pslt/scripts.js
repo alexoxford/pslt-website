@@ -35,7 +35,7 @@ function updateUI() {
     var epsilon = 10;
     var footer = $("div.footer");
     footer.css("margin-top", epsilon);
-    if ($("body").innerHeight() > window.innerHeight + epsilon) {
+    if ($("body").innerHeight() > window.innerHeight - footer.outerHeight()) {
         // if there's more than a page of content, position the footer normally
         footer.css("position", "inherit");
         footer.css("bottom", "auto");
