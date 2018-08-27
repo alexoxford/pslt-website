@@ -31,6 +31,28 @@ $(document).ready(function () {
 });
 
 function updateUI() {
+    /*region Index Page*/
+    var front_page = $("div#front-page");
+    var img = front_page.find("img");
+    var canvas = front_page.find("canvas");
+    var buttons = front_page.find("div#front-page-buttons");
+
+    var newLeft = (img[0].width / 2) - (buttons.outerWidth() / 2);
+    buttons.css("left", newLeft);
+
+    canvas.css("height", img[0].height);
+    canvas.css("width", img[0].width);
+
+    var ctx = canvas[0].getContext("2d");
+    var grd = ctx.createLinearGradient(0, 0, 0, canvas[0].height);
+    grd.addColorStop(0, "transparent");
+    grd.addColorStop(0.4, "transparent");
+    grd.addColorStop(1, "white");
+    ctx.fillStyle = grd;
+    ctx.clearRect(0, 0, canvas[0].width, canvas[0].height);
+    ctx.fillRect(0, 0, canvas[0].width, canvas[0].height);
+    /*endregion*/
+
     /*region Footer*/
     var epsilon = 10;
     var footer = $("div.footer");
@@ -83,7 +105,7 @@ function updateUI() {
 function getContentHeight() {
     var totalHeight = 0;
     $("body").children().each(function () {
-        if($(this).css('display') === 'none') {
+        if ($(this).css('display') === 'none') {
             return;
         }
         totalHeight = totalHeight + $(this).outerHeight(true);
