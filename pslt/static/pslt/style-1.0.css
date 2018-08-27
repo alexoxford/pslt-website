@@ -7,6 +7,9 @@ html {
 img {
   max-width: 100%; }
 
+div {
+  max-width: 100%; }
+
 img.rounded,
 canvas.rounded {
   border-radius: 1.9rem; }
@@ -216,7 +219,7 @@ div.content div.fab {
   border-radius: 1.9rem;
   padding: 1rem;
   display: inline-block;
-  margin: 0.5rem auto; }
+  margin: 0.5rem; }
 
 /*region Documents*/
 /*endregion*/
@@ -299,7 +302,11 @@ div.blog-snippet h2 {
     height: 3rem; }
 
   div.footer a.nav-donate-img-link {
-    display: none; } }
+    display: none; }
+
+  div.content a.fab,
+  div.content div.fab {
+    margin: 0.5rem auto; } }
 /*endregion*/
 
 /*# sourceMappingURL=style-1.0.css.map */

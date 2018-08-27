@@ -27,6 +27,10 @@ img {
   max-width: 100%;
 }
 
+div {
+  max-width: 100%;
+}
+
 img.rounded,
 canvas.rounded {
   border-radius: $radius;
@@ -274,7 +278,7 @@ div.content div.fab{
   border-radius: $radius;
   padding: 1rem;
   display: inline-block;
-  margin: 0.5rem auto;
+  margin: 0.5rem;
 }
 
 /*region Documents*/
@@ -383,6 +387,11 @@ div.blog-snippet h2 {
   div.footer a.nav-donate-img-link {
     display: none;
   }
+
+  div.content a.fab,
+div.content div.fab{
+  margin: 0.5rem auto;
+}
 }
 
 /*endregion*/
