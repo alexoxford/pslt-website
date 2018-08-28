@@ -46,7 +46,7 @@ function updateUI() {
     var ctx = canvas[0].getContext("2d");
     var grd = ctx.createLinearGradient(0, 0, 0, canvas[0].height);
     grd.addColorStop(0, "transparent");
-    grd.addColorStop(0.4, "transparent");
+    grd.addColorStop(0.2, "transparent");
     grd.addColorStop(1, "white");
     ctx.fillStyle = grd;
     ctx.clearRect(0, 0, canvas[0].width, canvas[0].height);

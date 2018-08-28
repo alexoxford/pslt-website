@@ -4,7 +4,7 @@
 {% block local_styles %}
     <style type="text/css">
         div.content {
-            width: 100%;
+            /*width: 100%;*/
         }
 
         div.content h1 {
@@ -32,16 +32,40 @@
 
         div#front-page div#front-page-buttons {
             position: absolute;
-            bottom: 2rem;
+            bottom: 3rem;
         }
+
+        div#pslt-logo {
+            margin: 0 auto;
+            width: 50%;
+        }
+
+        div#index-grid {
+            display: grid;
+            justify-items: center;
+            grid-template-columns: 50% 50%;
+        }
+
+        div#events {
+            width: 100%;
+        }
+
+        div#events h1 {
+            text-align: center;
+        }
+
+        div#timeline {
+            width: 100%;
+        }
+
+        div#timeline h1 {
+            text-align: center;
+        }
+
     </style>
 {% endblock %}
 
 {% block pre_content %}
-    <!--img src="{% static 'pslt/images/index-pre-content.jpg' %}" alt="Team picture"-->
-{% endblock %}
-
-{% block content %}
     <div id="front-page">
         <img src="{% static 'pslt/images/index-pre-content.jpg' %}" alt="Team picture">
         <canvas></canvas>
@@ -49,6 +73,30 @@
             <a href="./about" class="fab">About Us</a>
             <a href="./documents" class="fab">Latest Documents</a>
             <a href="./contact" class="fab">Contact</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div id="pslt-logo">
+        <img src="{% static 'pslt/images/pslt-logo.png' %}">
+    </div>
+
+    <div id="index-grid">
+        <div id="events">
+            <h1>Upcoming Events</h1>
+            {% for event in events %}
+                {% include 'pslt/index-event-snippet.html' with event=event %}
+                <br>
+            {% endfor %}
+        </div>
+
+        <div id="timeline">
+            <h1>Timeline</h1>
+            {% for milestone in milestones %}
+                {% include 'pslt/index-timeline-snippet.html' with milestone=milestone %}
+                <br>
+            {% endfor %}
         </div>
     </div>
 
