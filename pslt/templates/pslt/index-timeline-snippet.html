@@ -1,0 +1,11 @@
+{% load static %}
+{% load pslt_extras %}
+<div class="index-milestone {% if milestone.date <= today %}green{% else %}red{% endif %}">
+    {% if milestone.url %}
+        <a href="{{ milestone.url }}">{{ milestone.name }}</a>
+    {% else %}
+        <p>{{ milestone.name }}</p>
+    {% endif %}
+    <p> | </p>
+    <p>{{ event.date }}</p>
+</div>
